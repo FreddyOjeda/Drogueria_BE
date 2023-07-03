@@ -13,11 +13,11 @@ class Category(models.Model):
     description = models.CharField(max_length=250)
 
 class Product(models.Model):
-    name = models.CharField(100)
+    name = models.CharField(max_length=100)
     description = models.CharField(max_length=250)
     laboratory = models.CharField(max_length=100)
-    INVIMA = models.CharField(150)
-    batch = models.CharField(150)
+    INVIMA = models.CharField(max_length=150)
+    batch = models.CharField(max_length=150)
     expiration_date = models.DateField("expiration date")
     price = models.IntegerField
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
