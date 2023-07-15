@@ -25,7 +25,8 @@ SECRET_KEY = 'django-insecure-^gwm@dcxec#w(n!-kh(#x+u77jrrj1gy$ob62ugvas&&0_ftrt
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
+
 
 
 # Application definition
@@ -38,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'coreapi'
 ]
 
 MIDDLEWARE = [
@@ -96,7 +99,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'postgres',
-        'HOST':'db.ptmiwysppqzpnfsiuadb.supabase.co',
+        'HOST':'db.qarstspphdamjsmxdhmc.supabase.co',
         'DATABASE_PORT':5432,
         'USER':'postgres',
         'PASSWORD':'Drogueria2023'
@@ -146,3 +149,7 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+REST_FRAMEWORK={
+    'DEFAULT_SCHEMA_CLASS':'rest_framework.schemas.coreapi.AutoSchema'
+}

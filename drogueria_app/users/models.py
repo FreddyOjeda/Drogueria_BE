@@ -2,11 +2,14 @@ from django.db import models
 
 class User(models.Model):
     name = models.CharField(max_length=100)
-    identify_card = models.IntegerField
-    phone_number = models.IntegerField
+    identify_card = models.IntegerField()
+    phone_number = models.IntegerField()
     role = models.CharField(max_length=50)
     user = models.CharField(max_length=80)
     password = models.CharField(max_length=100)
+    access_token = models.CharField(max_length=500)
+    refresh_token = models.CharField(max_length=500)
+    time_expires_in = models.IntegerField()
 
 class Category(models.Model):
     name = models.CharField(max_length=80)
@@ -19,11 +22,11 @@ class Product(models.Model):
     INVIMA = models.CharField(max_length=150)
     batch = models.CharField(max_length=150)
     expiration_date = models.DateField("expiration date")
-    price = models.IntegerField
+    price = models.IntegerField()
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
 
 class Regiter(models.Model):
-    stock = models.IntegerField
+    stock = models.IntegerField()
     date_entry = models.DateField("date entry")
-    total_value = models.IntegerField
+    total_value = models.IntegerField()
     user = models.ForeignKey(User,on_delete=models.CASCADE)
