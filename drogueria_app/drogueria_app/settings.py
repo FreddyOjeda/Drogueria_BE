@@ -73,8 +73,15 @@ WSGI_APPLICATION = 'drogueria_app.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
-
-DATABASES = {
+"""
+    'default': {
+        'ENGINE': 'db.ptmiwysppqzpnfsiuadb.supabase.co',
+        'NAME': 'postgres',
+        'HOST':'127.0.0.1',
+        'DATABASE_PORT':5432,
+        'USER':'postgres',
+        'PASSWORD':'Drogueria2023'
+    },
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'drogueria-DB',
@@ -83,6 +90,19 @@ DATABASES = {
         'USER':'postgres',
         'PASSWORD':'201911519'
     },
+"""
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'postgres',
+        'HOST':'db.ptmiwysppqzpnfsiuadb.supabase.co',
+        'DATABASE_PORT':5432,
+        'USER':'postgres',
+        'PASSWORD':'Drogueria2023'
+    },
+
+    
 }
 
 
