@@ -1,1 +1,57 @@
+# Archivos generados automáticamente
+*.pyc
+*.pyo
+*.pyd
+__pycache__
+
+# Directorio de configuración local (si se usa settings_local.py)
+settings_local.py
+
+# Directorio de medios cargados localmente
+media/
+
+# Directorio de archivos estáticos generados automáticamente
+staticfiles/
+
+# Archivos de registro
+*.log
+
+# Entorno virtual (si se usa virtualenv)
 venv/
+env/
+ENV/
+
+# Archivos de base de datos
+*.sqlite3
+*.db
+
+# Cualquier archivo o carpeta específica de tu configuración local que desees excluir
+# Por ejemplo, si tienes un archivo "local_settings.py" que contiene configuraciones específicas locales.
+local_settings.py
+
+# Carpeta de migraciones (si utilizas el sistema de migraciones de Django)
+# Puedes omitir esto si prefieres mantener las migraciones en el repositorio
+**/migrations/
+
+# Archivo de secretos (si tienes uno separado y fuera de la configuración)
+secrets.json
+
+# Archivos de caché
+*.cache
+
+# Archivos de pruebas generados automáticamente
+.coverage
+.pytest_cache/
+nosetests.xml
+htmlcov/
+
+# Archivos y carpetas específicas de tu editor o IDE (pueden variar según el editor que utilices)
+# Por ejemplo, si usas Visual Studio Code (VSCode):
+.vscode/
+*.code-workspace
+
+# Carpeta específica para Node.js (si utilizas herramientas de frontend como npm o yarn)
+node_modules/
+
+# Carpeta específica para Python (si utilizas herramientas de gestión de paquetes como pipenv)
+Pipfile.lock
