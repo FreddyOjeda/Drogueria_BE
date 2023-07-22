@@ -1,0 +1,12 @@
+{
+    "builds": [{" src": "drogueria_app/wsgi.py",
+    "use": "@vercel/python",
+    "config": {"maxLambdaSize" : "15mb", "runtime": "python3.11"}
+    }],
+    "routes": [
+        {
+            "src": "/(.*)" ,
+            "dest": "drogueria_app/wsgi.py"
+        }
+    ]
+}
